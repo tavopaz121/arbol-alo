@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+body {
+  background-color: #17324f;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+pre {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ff0a;
+}
+
+pre span:first-child {
+  color: rgb(255, 255, 0);
+}
+
+pre span:last-child {
+  color: #795548;
+}
+
+.snow {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+}
+
+.snow-floor {
+  width: 100%;
+  height: 3%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.title {
+  color: #fff;
+  font-family: "Lobster";
+  font-weight: lighter;
+}
+
+@keyframes fall {
+  0% {
+    top: -100px;
+  }
+
+  100% {
+    top: 100vh;
+  }
+}
+
+.tree {
+  display: grid;
+  place-items: center;
+  color: white;
+  line-height: 3.5rem;
+  font-size: 4rem;
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+}
+
+.window {
+  width: 240px;
+  height: 240px;
+  background: #a0d5d3;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  border-radius: 50%;
+  margin-top: -60px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 10px solid #f8e7dc;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Mountains of Christmas';
+  font-style: normal;
+  src: local("Mountains of Christmas"), local("MountainsofChristmas-Regular"), url(https://fonts.gstatic.com/s/mountainsofchristmas/v8/dVGBFPwd6G44IWDbQtPewylJhLDHyIrT3I5b5eGTHmw.woff2) format("woff2");
+}
+
+.message {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 80px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #f8e7dc;
+  font-family: 'Mountains of Christmas';
+}
+
+.message h1 {
+  font-style: normal;
+  font-size: 75px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.message h2 {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.message h2 a {
+  color: #f7be10;
+  opacity: 0.8;
+}
+
+.message h2 a:hover {
+  opacity: 1;
+}
+
+/* .gift-box caja de regalo*/
+.regalo {
+  width: auto;
+  margin: 0 auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+
+.regalo2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  right: 25%;
+  cursor: pointer;
+}
+
+.caja,
+.tapa, .caja2, .tapa2 {
+  background:
+    -webkit-radial-gradient(white 10%, transparent 15.1%),
+    -webkit-radial-gradient(white 7%, transparent 15.1%),
+    #f80000;
+  background-position: 0 0, 25px 25px;
+  background-size: 15px 15px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.caja, .caja2 {
+  width: 200px;
+  height: 100px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.tapa, .tapa2 {
+  width: 200px;
+  height: 20px;
+  border-radius: 3px 3px 0px 0px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0 2px;
+  background-color: #f80000;
+  /* transiciones */
+  top: 0;
+  left: 0;
+  transition:
+    top ease-out 0.5s,
+    left ease-out 0.5s,
+    transform ease-out 0.5s;
+}
+
+.caja span,
+.tapa span, .caja2 span, .tapa2 span {
+  position: absolute;
+  display: block;
+  background: #43a047;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.caja span:first-child, .caja2 span:first-child {
+  width: 100%;
+  height: 10px;
+  top: 20px;
+}
+
+.caja span:last-child,
+.tapa span, .caja2 span:last-child, .tapa2 span {
+  width: 10px;
+  height: 100%;
+  left: 170px;
+}
+
+.tapa span, .tapa2 span {
+  left: 172px;
+
+}
+
+.promo, .promo2 {
+  font-size: 30px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  position: relative;
+  height: 0;
+  top: 10px;
+  transition: all ease-out 0.7s;
+}
+
+.promo p, .promo2 p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.promo h2, .promo2 h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Efecto hover */
+.regalo:hover .tapa, .regalo2:hover .tapa2 {
+  top: -60px;
+  transform: rotateZ(10deg);
+  left: 10px;
+}
+
+.regalo:hover .promo, .regalo2:hover .promo2 {
+  top: -50px;
+}
+
+
+@-webkit-keyframes swing {
+
+  0%,
+  100% {
+    transform: rotate(-30deg);
+  }
+
+  5%,
+  45% {
+    opacity: 0.25;
+  }
+
+  50%,
+  100%,
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes swing {
+
+  0%,
+  100% {
+    transform: rotate(-30deg);
+  }
+
+  5%,
+  45% {
+    opacity: 0.25;
+  }
+
+  50%,
+  100%,
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+
+@media (max-width: 768px){
+  .regalo {
+    left: 0;
+    margin-left: 5rem;
+    z-index: 100;
+  }
+
+  .promo {
+    background-color: black;
+  }
+
+  .regalo2 {
+    right: 0;
+    display: none;
+  }
+
+  .tree {
+    margin-bottom: 7rem;
+  }
+}
